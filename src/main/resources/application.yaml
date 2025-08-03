@@ -1,0 +1,58 @@
+# application.yml (수정 후 내용)
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # RDS 호스트명, DB 이름, 사용자 이름은 환경 변수로 받되, 값이 없으면 현재의 기본값을 사용
+    url: jdbc:mysql://${RDS_HOSTNAME:soccerup.cb4020m4c3oj.eu-north-1.rds.amazonaws.com}:3306/${RDS_DATABASE_NAME:soccerup}
+    username: ${RDS_USERNAME:admin}
+    # 데이터베이스 비밀번호는 환경 변수로만 받도록 설정 (매우 중요!)
+    password: ${RDS_PASSWORD}
+
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.MySQL8Dialect
+
+  web:
+    resources:
+      add-mappings: false
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${MAIL_USERNAME:tlswjdgns31@gmail.com}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+      auth-code-expiration-millis: 1800000
+
+  data:
+    redis:
+      # Redis 호스트와 포트는 환경 변수로 받되, 값이 없으면 현재의 기본값 사용
+      host: my-redis
+      port: ${REDIS_PORT:6379}
+      # Redis 비밀번호는 환경 변수로만 받도록 설정 (매우 중요!)
+      password: ${REDIS_PASSWORD}
+
+jwt:
+  # JWT 시크릿 키는 환경 변수로만 받도록 설정 (매우 중요!)
+  secret: ${JWT_SECRET}
+  access-token-expiration: 3600000
+  refresh-token-expiration: 604800000
+
+logging:
+  level:
+    com.example.careercubebackend.api.Squad.application.impl.SquadAddService: DEBUG
