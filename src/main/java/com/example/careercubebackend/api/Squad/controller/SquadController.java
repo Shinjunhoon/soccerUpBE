@@ -48,8 +48,7 @@ public class SquadController {
     @GetMapping("/team/{teamId}/byFormation")
     public ResponseEntity<ApiResponseEntity> getSquadByTeamIdAndFormation( // ✨ 반환 타입 변경
                                                                            @PathVariable Long teamId,
-                                                                           @RequestParam String formationType,
-                                                                           Authentication authentication) {
+                                                                           @RequestParam String formationType, Authentication authentication) {
         try {
             Long userId = JwtUtil.getLoginId(authentication);
             Optional<SquadResponse> squadOptional = squadService.getSquadByTeamIdAndFormationType(teamId, formationType, userId);
@@ -57,9 +56,6 @@ public class SquadController {
             if (squadOptional.isPresent()) {
                 return ApiResponseEntity.successResponseEntity(squadOptional.get()); // ✨ ApiResponseEntity 헬퍼 메서드 사용
             } else {
-                // 해당 포메이션의 스쿼드가 없으면 404 Not Found 반환
-                // ApiResponseEntity는 기본적으로 200 OK를 반환하므로,
-                // ResponseEntity.status(HttpStatus.NOT_FOUND)를 직접 사용하여 HTTP 상태 코드 변경
                 return ResponseEntity.status(HttpStatus.NOT_FOUND)
                         .body(ApiResponseEntity.failResponseEntity("Squad not found for team " + teamId + " and formation " + formationType).getBody()); // ✨ failResponseEntity 사용
             }

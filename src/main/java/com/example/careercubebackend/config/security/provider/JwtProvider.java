@@ -59,13 +59,6 @@ public class JwtProvider {
         final Claims claims = getAllClaimsFromToken(token);
         return claimsResolver.apply(claims);
     }
-
-    /**
-     * token 사용자 모든 속성 정보 조회
-     *
-     * @param token JWT
-     * @return All Claims
-     */
     private Claims getAllClaimsFromToken(final String token) {
         return Jwts.parserBuilder()
                 .setSigningKey(key)
@@ -74,12 +67,6 @@ public class JwtProvider {
                 .getBody();
     }
 
-    /**
-     * 토큰 만료 일자 조회
-     *
-     * @param token JWT
-     * @return 만료 일자
-     */
     public Date getExpirationDateFromToken(final String token) {
         return getClaimFromToken(token, Claims::getExpiration);
     }

@@ -15,6 +15,7 @@ import lombok.*;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,6 +42,8 @@ public class User extends RegModDt {
         private UserInfo userInfo;
 
         private boolean delYn = Boolean.FALSE; // 삭제 여부 기본값 false
+
+    private LocalDateTime createdAt;
 
 
 

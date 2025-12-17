@@ -29,5 +29,4 @@ public class LoginController {
         headers.set("Refresh-Token", loginResponseDTO.refreshToken()); // 필요하면 추가
         return ApiResponseEntity.successResponseEntity(loginResponseDTO);
     }
-
 }

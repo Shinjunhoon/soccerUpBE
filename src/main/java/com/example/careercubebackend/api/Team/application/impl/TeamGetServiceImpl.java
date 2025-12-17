@@ -39,13 +39,13 @@ public class TeamGetServiceImpl implements com.example.careercubebackend.api.Tea
 
     @Override
     public List<TeamResponseDto> searchTeamByMember(Long userId) {
-        List<TeamMember> teamMembers = teamMemberRepository.findByUser_Id(userId);
+        // 변경된 메서드 호출
+        List<TeamMember> teamMembers = teamMemberRepository.findByUserWithTeam(userId);
 
         return teamMembers.stream()
-                .map(tm -> new TeamResponseDto(tm.getTeam())) // inviteLink 없는 응답
+                .map(tm -> new TeamResponseDto(tm.getTeam())) // tm.getTeam() 호출 시 추가 쿼리 발생하지 않음
                 .collect(Collectors.toList());
     }
-
     @Override
     public TeamResponseJoinUrl getTeam(String inviteCode) {
         Team team = teamRepository.findByInviteCode(inviteCode)

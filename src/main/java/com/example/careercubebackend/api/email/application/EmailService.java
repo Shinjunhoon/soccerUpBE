@@ -48,14 +48,6 @@ public class EmailService {
     }
 
     public void sendEmail(String toEmail) throws MessagingException {
-        log.info("--- EmailService Debug Info ---");
-        log.info("Sender Email (username): {}", senderEmail);
-        // 디버깅 목적으로만 일시적으로 사용하고, 실제 서비스에서는 절대 노출하지 마세요.
-        log.info("Mail Password (앱 비밀번호): {}", mailPassword);
-        log.info("To Email: {}", toEmail);
-        log.info("Auth Code Expiration Millis: {}", authCodeExpirationMillis);
-        log.info("--- End Debug Info ---");
-
 
         if (redisUtil.existData(toEmail)) {
             redisUtil.deleteData(toEmail);

@@ -3,12 +3,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # RDS 호스트명, DB 이름, 사용자 이름은 환경 변수로 받되, 값이 없으면 현재의 기본값을 사용
-    url: jdbc:mysql://${RDS_HOSTNAME:soccerup.cb4020m4c3oj.eu-north-1.rds.amazonaws.com}:3306/${RDS_DATABASE_NAME:soccerup}
-    username: ${RDS_USERNAME:admin}
-    # 데이터베이스 비밀번호는 환경 변수로만 받도록 설정 (매우 중요!)
-    password: ${RDS_PASSWORD}
-
+    url: jdbc:mysql://localhost:33066/soccerTem?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: user   # 👈 Docker에서 만든 일반 유저
+    password: 1234   # 👈 Docker에서 만든 일반 유저 비번
   jpa:
     properties:
       hibernate:
@@ -42,7 +39,7 @@ spring:
   data:
     redis:
       # Redis 호스트와 포트는 환경 변수로 받되, 값이 없으면 현재의 기본값 사용
-      host: my-redis
+      host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}
       # Redis 비밀번호는 환경 변수로만 받도록 설정 (매우 중요!)
       password: ${REDIS_PASSWORD}

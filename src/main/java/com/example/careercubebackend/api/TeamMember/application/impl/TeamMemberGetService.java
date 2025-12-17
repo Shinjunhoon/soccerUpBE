@@ -21,10 +21,13 @@ public class TeamMemberGetService implements com.example.careercubebackend.api.T
 
     @Override
     public List<TeamMemberResponseDto> FindByTeam_id(Long team_id) {
-        List<TeamMember> teamMembers = teamMemberRepository.findByTeam_Id(team_id);
+
+        // N+1 문제가 해결된 새로운 메서드를 호출
+        List<TeamMember> teamMembers = teamMemberRepository.findByTeamWithUser(team_id);
 
         return teamMembers.stream()
                 .map(ts -> new TeamMemberResponseDto(ts.getId(),ts.getUser().getUserInfo().getName(),ts.getPosition()))
                 .collect(Collectors.toList());
     }
+
 }
