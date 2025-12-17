@@ -11,41 +11,6 @@
 
 ---
 
-## 🛠 사용 기술
-
-### Front-End
-
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square\&logo=nextdotjs\&logoColor=white)
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square\&logo=react\&logoColor=black)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=flat-square\&logo=tailwindcss\&logoColor=white)
-
-### Back-End
-
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=flat-square\&logo=springboot\&logoColor=white)
-![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=flat-square\&logo=springsecurity\&logoColor=white)
-![Spring Data JPA](https://img.shields.io/badge/JPA-59666C?style=flat-square)
-![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square\&logo=jsonwebtokens\&logoColor=white)
-
-### Database
-
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square\&logo=mysql\&logoColor=white)
-
-### Infra / DevOps
-
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square\&logo=docker\&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square\&logo=githubactions\&logoColor=white)
-![AWS EC2](https://img.shields.io/badge/AWS%20EC2-FF9900?style=flat-square\&logo=amazonaws\&logoColor=white)
-![AWS S3](https://img.shields.io/badge/AWS%20S3-569A31?style=flat-square\&logo=amazons3\&logoColor=white)
-![CloudFront](https://img.shields.io/badge/CloudFront-FF9900?style=flat-square\&logo=amazonaws\&logoColor=white)
-
-### Collaboration / Tool
-
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square\&logo=github\&logoColor=white)
-![Notion](https://img.shields.io/badge/Notion-000000?style=flat-square\&logo=notion\&logoColor=white)
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=flat-square\&logo=figma\&logoColor=white)
-
----
-
 ## 🎯 주요 기능
 
 * 👥 **팀 멤버 관리**
@@ -74,6 +39,28 @@
 
 와 같은 불편함을 해결하고자 **Squad Up**을 기획했습니다.
 누구나 쉽게 사용할 수 있는 UI와 실제 경기 상황에 맞춘 기능 제공을 핵심 가치로 두고 있습니다.
+
+---
+
+## 🛠️ 사용 기술 (Tech Stack)
+
+프로젝트에 사용된 주요 기술 스택입니다.
+
+### **Frontend**
+
+  * ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=white) - 컴포넌트 기반 UI 개발 및 상태 관리
+  * ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white) - 안정적인 코드 작성 및 타입 추론
+  * ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white) - 유연하고 빠른 스타일링 및 반응형 디자인
+  * ![Zustand](https://img.shields.io/badge/Zustand-D09D1D?style=flat-square&logo=zustand&logoColor=white) - 효율적인 전역 상태 관리 (멤버 및 스쿼드 데이터)
+
+### **Backend & Storage**
+
+  * ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=node.js&logoColor=white) - 서버 사이드 런타임 환경
+  * ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=white) - 실시간 데이터베이스 및 사용자 인증(Auth)
+
+### **Deployment**
+
+  * ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) - 빠르고 간편한 프론트엔드 배포
 
 ---
 
@@ -116,18 +103,3 @@
 ---
 
 ## 📁 이미지 폴더 구조
-
-```text
-images/
- ├─ main.png
- ├─ members.png
- ├─ squad.png
- └─ team-create.png
-```
-
----
-
-## ⚠️ 참고 사항
-
-* 본 프로젝트는 축구 동호인 및 아마추어 팀을 대상으로 한 개인/팀 프로젝트입니다.
-* README의 이미지는 GitHub 저장소 기준 상대 경로를 사용합니다.
