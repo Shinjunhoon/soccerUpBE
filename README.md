@@ -53,33 +53,46 @@
 
 ## 🖥️ 화면 미리보기
 
-> 실제 서비스 화면을 통해 Squad Up의 주요 기능과 사용 흐름을 확인할 수 있습니다.
+> Squad Up의 주요 기능 화면 (메인 / 선수 리스트 / 스쿼드 배치 / 팀 생성)
 
-### 🔐 로그인 / 팀 선택 화면
-
-* 팀별 접근을 위한 로그인 화면
-* 사용자의 소속 팀 선택
-
-![로그인 화면](./images/main.png)
-
----
-
-### 👥 멤버 관리 화면
-
-* 팀원 추가 / 수정 / 삭제
-* 포지션 및 기본 정보 관리
-
-![멤버 관리 화면](./images/members.png)
-
----
-
-### ⚽ 스쿼드 포지션 배치 화면
-
-* 경기별 출전 멤버 선택
-* 포지션 기반 스쿼드 구성
-
-![스쿼드 배치 화면](./images/squad.png)
+<table>
+  <tr>
+    <td align="center">
+      <strong>메인 화면</strong><br/>
+      <img src="./images/main.png" width="400"/>
+    </td>
+    <td align="center">
+      <strong>선수 리스트</strong><br/>
+      <img src="./images/members.png" width="400"/>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <strong>스쿼드 배치</strong><br/>
+      <img src="./images/squad.png" width="400"/>
+    </td>
+    <td align="center">
+      <strong>팀 생성</strong><br/>
+      <img src="./images/team-create.png" width="400"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
-> ⚠️ 본 프로젝트는 축구 동호인 및 아마추어 팀을 대상으로 한 개인/팀 프로젝트입니다.
+## 📁 이미지 폴더 구조
+
+```text
+images/
+ ├─ main.png
+ ├─ members.png
+ ├─ squad.png
+ └─ team-create.png
+```
+
+---
+
+## ⚠️ 참고 사항
+
+* 본 프로젝트는 축구 동호인 및 아마추어 팀을 대상으로 한 개인/팀 프로젝트입니다.
+* README의 이미지는 GitHub 저장소 기준 상대 경로를 사용합니다.
