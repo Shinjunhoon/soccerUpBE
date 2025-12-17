@@ -63,17 +63,17 @@
     </td>
     <td align="center">
       <strong>선수 리스트</strong><br/>
-      <img src="./images/members.png" width="400"/>
+      <img src="./images/list.png" width="400"/>
     </td>
   </tr>
   <tr>
     <td align="center">
       <strong>스쿼드 배치</strong><br/>
-      <img src="./images/squad.png" width="400"/>
+      <img src="./images/build.png" width="400"/>
     </td>
     <td align="center">
       <strong>팀 생성</strong><br/>
-      <img src="./images/team-create.png" width="400"/>
+      <img src="./images/reate.png" width="400"/>
     </td>
   </tr>
 </table>
