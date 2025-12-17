@@ -73,7 +73,7 @@
     </td>
     <td align="center">
       <strong>팀 생성</strong><br/>
-      <img src="./images/reate.png" width="400"/>
+      <img src="./images/create.png" width="400"/>
     </td>
   </tr>
 </table>
